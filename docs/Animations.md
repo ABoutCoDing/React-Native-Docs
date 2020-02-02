@@ -300,7 +300,7 @@ Animated.timing(this.state.animatedValue, {
 
 [RNTester](https://github.com/facebook/react-native/blob/master/RNTester/) 앱을 실행 한 다음 Native Animated Example을로드하여 기본 드라이버가 작동 중인지 확인할 수 있습니다. [소스 코드](https://github.com/facebook/react-native/blob/master/RNTester/js/NativeAnimationsExample.js)를 살펴보고 이러한 예제가 어떻게 생성되었는지 알아볼 수도 있습니다.
 
-##### (경고) Caveats 
+##### 경고 (Caveats)
 
 현재 `Animated`로 수행 할 수있는 모든 기능이 기본 드라이버에서 지원되는 것은 아닙니다. 주요 제한 사항은 레이아웃이 아닌 속성에만 애니메이션을 적용 할 수 있다는 것입니다. transform(변형) 및 opacity(불투명도)와 같은 기능은 작동하지만 flexbox 및 위치 속성은 작동하지 않습니다. `Animated.event`를 사용하면 버블링 이벤트가 아닌 직접 이벤트에서만 작동합니다. 이것은 `PanResponder`와는 작동하지 않지만 `ScrollView#onScroll`과 같은 것에서는 작동합니다.
 
