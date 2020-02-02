@@ -1,6 +1,6 @@
 # **Animated**
 
-> https://facebook.github.io/react-native/docs/animated
+> React Native 의 [APIs > Animated](https://facebook.github.io/react-native/docs/animated) 의 번역 문서입니다. 번역 오류는 댓글로 남겨 주세요. 원문을 보시기를 추천드립니다.
 
 `Animated` 라이브러리는 애니메이션을 유동적이고 강력하며 어렵지 않게(painless) 빌드하고 유지 관리하도록 설계되었습니다. `Animated`는 시간 기반 애니메이션(time-based animation) 실행을 제어하기 위해 구성 가능한 변환 및 `start(시작)`/`stop(중지)` 방법을 사용하여 입력과 출력 간의 선언적 관계에 중점을 둡니다.
 
@@ -16,7 +16,7 @@ Animated.timing(
 ).start(); // Start the animation
 ```
 
-애니메이션 사용의 추가 예를 보려면 [애니메이션](https://facebook.github.io/react-native/docs/animations#animated-api) 안내서를 참조하십시오.
+애니메이션 사용의 추가 예를 보려면 [애니메이션](https://github.com/ABoutCoDing/React-Native-Docs/blob/master/docs/Animations.md#animated-api) 안내서를 참조하십시오.
 
 &nbsp;
 

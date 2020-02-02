@@ -1,6 +1,6 @@
 # **Easing**
 
-> React Native 의 [APIs > Easing](https://facebook.github.io/react-native/docs/easing) 의 번역 문서입니다. 번역 오류는 댓글로 남겨 주세요. 
+> React Native 의 [APIs > Easing](https://facebook.github.io/react-native/docs/easing) 의 번역 문서입니다. 번역 오류는 댓글로 남겨 주세요. 원문을 보시기를 추천드립니다.
 
 `Easing` 모듈은 일반적인 easing functions를 구현합니다. 이 모듈은 [Animated.timing()](https://facebook.github.io/react-native/docs/animated#timing)에서 애니메이션에서 물리적으로 믿을 수있는 motion을 전달하는 데 사용됩니다.
 
