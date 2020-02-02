@@ -53,7 +53,7 @@ Animated.timing(
 
 네이티브 드라이버를 사용하여 애니메이션을 시작하기 전에 애니메이션에 대한 모든 것을 네이티브로 보내 네이티브 코드가 모든 프레임에서 브리지를 거치지 않고도 UI스레드에서 애니메이션을 수행 할 수 있습니다. 애니메이션이 시작되면 애니메이션에 영향을주지 않고 JS 스레드를 차단할 수 있습니다. 
 
-애니메이션 구성에서 `useNativeDriver : true` 로 지정하여 기본 드라이버를 사용할 수 있습니다.  자세한 내용은 [Animation]([https://github.com/ABoutCoDing/React-Native-Docs/blob/master/docs/Animations.md#%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C-%EC%82%AC%EC%9A%A9-using-the-native-driver](https://github.com/ABoutCoDing/React-Native-Docs/blob/master/docs/Animations.md#네이티브-드라이브-사용-using-the-native-driver) 안내서를 참조하십시오.
+애니메이션 구성에서 `useNativeDriver : true` 로 지정하여 기본 드라이버를 사용할 수 있습니다.  자세한 내용은 [Animation](https://github.com/ABoutCoDing/React-Native-Docs/blob/master/docs/Animations.md#네이티브-드라이브-사용-using-the-native-driver) 안내서를 참조하십시오.
 
 &nbsp;
 
