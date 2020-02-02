@@ -353,7 +353,7 @@ static loop(animation, config?)
 static event(argMapping, config?)
 ```
 
-매핑 배열을 가져 와서 각 인수에서 값을 추출한 다음 매핑 된 출력에서 setValue를 호출합니다. 예 :
+매핑 배열을 가져 와서 각 인수에서 값을 추출한 후 매핑 된 출력(mapped outputs)에서 setValue를 호출합니다. 예 :
 
 ```javascript
  onScroll={Animated.event(
