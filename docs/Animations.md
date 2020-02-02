@@ -4,15 +4,15 @@
 
 훌륭한 사용자 경험을 위해서는 애니메이션이 매우 중요합니다. 정지된 물체는 움직이기 시작할 때 관성을 극복해야합니다. 움직이는 물체는 운동량을 가졌으며 거의 즉시 멈추지 않습니다. 애니메이션을 사용하면 인터페이스에서 물리적으로 믿을 수있는 동작을 전달할 수 있습니다.
 
-React Native는 두 가지 보완 애니메이션 시스템을 제공합니다. React Native는 특정 값을 세부적으로 대화식으로 제어 할 수있는 2 개의 보완 애니메이션 시스템: [Animated](#animated-api)와 애니메이션 글로벌 레이아웃 트랜잭션을위한 [LayoutAnimation](#layoutanimation-api)을 제공합니다.
+React Native는 두 가지 보완 애니메이션 시스템을 제공합니다. React Native는 특정 값을 세부적으로 대화식으로 제어 할 수있는 2개의 보완 애니메이션 시스템인 [Animated](#animated-api)와 애니메이션 글로벌 레이아웃 트랜잭션을 위한 [LayoutAnimation](#layoutanimation-api)을 제공합니다.
 
 &nbsp;
 
 ## **Animated API**
 
-[Animated](https://github.com/ABoutCoDing/React-Native-Docs/blob/master/apis/Animated.md) API는 매우 흥미로운 방식으로 다양한 흥미로운 애니메이션 및 상호 작용 패턴을 간결하게 표현하도록 설계되었습니다. `Animated`는 시간 기반 애니메이션(time-based animation) 실행을 제어하기 위해 구성 가능한 변환 및 `star/stop` 메서드를 사용하여 입력과 출력 간의 선언적 관계에 중점을 둡니다.
+[Animated](https://github.com/ABoutCoDing/React-Native-Docs/blob/master/apis/Animated.md) API는 매우 흥미로운 방식으로 다양한 애니메이션 및 상호 작용 패턴을 간결하게 표현하도록 설계되었습니다. `Animated`는 시간 기반 애니메이션(time-based animation) 실행을 제어하기 위해 구성 가능한 변환 및 `star/stop` 메서드를 사용하여 입력과 출력 간의 선언적 관계에 중점을 둡니다.
 
-`Animated`는 6 개의 애니메이션 가능 구성 요소 유형 인 `View`, `Text`, `Image`, `ScrollView`, `FlatList` 및 `SectionList`를 내보내지만 `Animated.createAnimatedComponent()`를 사용하여 직접 만들 수도 있습니다.
+`Animated`는 6개의 애니메이션 가능 구성 요소 유형 인 `View`, `Text`, `Image`, `ScrollView`, `FlatList` 및 `SectionList`를 내보내지만 `Animated.createAnimatedComponent()`를 사용하여 직접 만들 수도 있습니다.
 
 예를 들어, 마운트 될 때 페이드 인(fades in)되는 컨테이너 뷰는 다음과 같습니다.
 
@@ -57,9 +57,9 @@ export default () => {
 }
 ```
 
-여기서 무슨 일이 일어나고 있는지 봅시다. `FadeInView` 생성자에서 fadeAnim이라는 새로운 `Animated.Value`가 state의 일부로 초기화됩니다. `View`의 불투명도 속성이 이 애니메이션 값에 매핑됩니다. 씬(scense) 뒤에서 숫자 값이 추출되어 불투명도를 설정하는데 사용됩니다.
+여기서 무슨 일이 일어나고 있는지 봅시다. `FadeInView` 생성자에서 `fadeAnim`이라는 새로운 `Animated.Value`가 state의 일부로 초기화됩니다. `View`의 불투명도 속성이 이 애니메이션 값에 매핑됩니다. 씬(scense) 뒤에서 숫자 값이 추출(extracted)되어 불투명도를 설정하는데 사용됩니다.
 
-구성 요소가 마운트되면 불투명도가 0으로 설정됩니다. 그다음 `fadeAnim` 애니메이션 값에서 easing animation이 시작되어 값이 최종 값 1로 애니메이션 될 때 각 프레임의 모든 종속 매핑 (이 경우 불투명도 만)이 업데이트됩니다.
+구성 요소가 마운트되면 불투명도가 0으로 설정됩니다. 그다음 `fadeAnim` 애니메이션 값에서 easing animation이 시작되어 값이 최종 값 1로 움직일 때 각 프레임의 모든 종속 매핑 (이 경우 불투명도 만)이 업데이트됩니다.
 
 이것은 `setState`를 호출하고 다시 렌더링하는 것보다 빠른 최적화 된 방식으로 수행됩니다. 전체 구성이 선언적이므로 구성을 직렬화하고 우선 순위가 높은 스레드에서 애니메이션을 실행하는 추가 최적화를 구현할 수 있습니다.
 
@@ -67,13 +67,13 @@ export default () => {
 
 ### Configuring animations
 
-애니메이션은 과하게(heavily) 구성 할 수 있습니다. 애니메이션 유형에 따라 커스텀 및 사전 정의 된(predefined) easing functions(여유 함수), 지연(delays), 지속 시간(durations), 감쇠 계수(decay factors), 스프링 상수(spring constants) 등을 모두 조정할 수 있습니다.
+애니메이션은 다양하게(heavily) 구성 할 수 있습니다. 애니메이션 유형에 따라 커스텀 및 사전 정의 된(predefined) easing functions(여유 함수), 지연(delays), 지속 시간(durations), 감쇠 계수(decay factors), 스프링 상수(spring constants) 등을 모두 조정할 수 있습니다.
 
 `Animated`는 여러 애니메이션 유형을 제공하며 가장 일반적으로 사용되는 애니메이션 유형은 [Animated.timing()](https://facebook.github.io/react-native/docs/animated#timing)입니다. 미리 정의 된 다양한 여유 함수 중 하나를 사용하여 시간에 따른 값 애니메이션을 지원하거나 직접 사용할 수 있습니다. Easing functions은 일반적으로 오브젝트의 점진적인 가속 및 감속을 전달하기 위해 애니메이션에서 사용됩니다.
 
-기본적으로 `timing`은 점진적 가속을 최고 속도(full speed)로 전달하고 점차적으로 정지 위치까지 감속하는 easeInOut 곡선을 사용합니다. `easing parameter(여유 매개 변수)`를 전달하여 다른 Easing functions을 지정할 수 있습니다. 커스텀 `duration(지속)` 시간 또는 애니메이션 시작 전 `delay(지연)`도 지원됩니다.
+기본적으로 `timing`은 점진적 가속을 최고 속도(full speed)로 전달하고 점차 정지 위치까지 감속하는 easeInOut 곡선을 사용합니다. `easing parameter(여유 매개 변수)`를 전달하여 다른 Easing functions을 지정할 수 있습니다. 커스텀 `duration(지속)` 시간 또는 애니메이션 시작 전 `delay(지연)`도 지원됩니다.
 
-예를 들어, 최종 위치로 이동하기 전에 약간 백업되는 객체의 2초 길이(2-second)의 애니메이션을 만들려는 경우:
+예를 들어, 최종 위치로 이동하기 전에 조금 백업(backs up)되는 객체의 2초 길이(2-second)의 애니메이션을 만들려는 경우:
 
 ```javascript
 Animated.timing(this.state.xPosition, {
@@ -114,7 +114,7 @@ Animated.sequence([
 ]).start(); // start the sequence group
 ```
 
-하나의 애니메이션이 중지되거나 중단되면 그룹의 다른 모든 애니메이션도 중지됩니다. `Animated.parallel`에는 이를 비활성화하기 위해 `false`로 설정할 수있는 `stopTogether` 옵션이 있습니다.
+하나의 애니메이션이 중지되거나 중단되면 그룹의 다른 모든 애니메이션도 중지됩니다. `Animated.parallel`에는 이를 비활성화하기 위해 `false`로 설정할 수 있는 `stopTogether` 옵션이 있습니다.
 
 애니메이션 API 참조의 [Composing animations(애니메이션 구성)]([https://github.com/ABoutCoDing/React-Native-Docs/blob/master/apis/Animated.md#%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98-%EA%B5%AC%EC%84%B1-composing-animations](https://github.com/ABoutCoDing/React-Native-Docs/blob/master/apis/Animated.md#애니메이션-구성-composing-animations)) 섹션에서 컴포지션 메서드의 전체 목록을 찾을 수 있습니다.
 
@@ -122,7 +122,7 @@ Animated.sequence([
 
 ### **애니메이션 값 결합 (Combining animated values)**
 
-더하기, 곱하기, 나누기 또는 모듈로를 통해 [두 개의 애니메이션 값을 결합(combine two animated values)](https://facebook.github.io/react-native/docs/animated#combining-animated-values)하여 새로운 애니메이션 값을 만들 수 있습니다.
+addition(더하기), multiplication(곱하기), division(나누기) 또는 modulo(모듈로)를 통해 [두 개의 애니메이션 값을 결합(combine two animated values)](https://facebook.github.io/react-native/docs/animated#combining-animated-values)하여 새로운 애니메이션 값을 만들 수 있습니다.
 
 움직이는(animate) 값의 계산을 위해 다른 애니메이션 값을 반전시켜야하는 경우가 있습니다. 예를 들어 스케일 반전 (2x --> 0.5x)이 있습니다.
 
@@ -139,7 +139,7 @@ Animated.spring(a, {
 
 ### **보간 (Interpolation)**
 
-각 속성은 먼저 보간을 통해 실행될 수 있습니다. 보간은 일반적으로 선형 보간을 사용하여 입력 범위를 출력 범위에 매핑하지만  easing functions 도 지원합니다. 기본적으로 주어진 범위를 넘어서 곡선을 추정하지만 출력 값을 고정시킬 수도 있습니다.
+각 속성은 먼저 보간(Interpolation)을 통해 실행될 수 있습니다. 보간은 일반적으로 선형 보간을 사용하여 입력 범위를 출력 범위에 매핑하지만  easing functions 도 지원합니다. 기본적으로 주어진 범위를 넘어서 곡선을 추정하지만 출력 값을 고정시킬 수도 있습니다.
 
 0-1 범위를 0-100 범위로 변환하는 매핑은 다음과 같습니다.
 
@@ -190,7 +190,7 @@ Input | Output
    200|      0
 ```
 
-`interpolate()`는 문자열에 대한 매핑도 지원하므로 색상과 단위 값을 애니메이션 할 수 있습니다. 예를 들어 회전(rotation)에 애니메이션을 적용하려면 다음을 수행하십시오.
+`interpolate()`는 문자열에 대한 매핑도 지원하므로 색상과 단위 값을 움직이게(animate) 할 수 있습니다. 예를 들어 회전(rotation)에 애니메이션을 적용하려면 다음을 수행하십시오.
 
 ```javascript
 value.interpolate({
