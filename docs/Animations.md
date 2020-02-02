@@ -2,17 +2,9 @@
 
 > React Native 의 [Docs > Animations](https://facebook.github.io/react-native/docs/animations) 의 번역 문서입니다. 번역 오류는 댓글로 남겨 주세요. 원문을 보시기를 추천드립니다.
 
-훌륭한 사용자 경험을 위해서는 애니메이션이 매우 중요합니다. 
+훌륭한 사용자 경험을 위해서는 애니메이션이 매우 중요합니다. 정지된 물체는 움직이기 시작할 때 관성을 극복해야합니다. 움직이는 물체는 운동량을 가졌으며 거의 즉시 멈추지 않습니다. 애니메이션을 사용하면 인터페이스에서 물리적으로 믿을 수있는 동작을 전달할 수 있습니다.
 
-정지된 물체는 움직이기 시작할 때 관성을 극복해야합니다.
-
-움직이는 물체는 운동량을 가졌으며 거의 즉시 멈추지 않습니다.
-
-애니메이션을 사용하면 인터페이스에서 물리적으로 믿을 수있는 동작을 전달할 수 있습니다.
-
-React Native는 두 가지 보완 애니메이션 시스템을 제공합니다. 
-
-React Native는 특정 값을 세부적으로 대화식으로 제어 할 수있는 2 개의 보완 애니메이션 시스템: [Animated](#animated-api)와 애니메이션 글로벌 레이아웃 트랜잭션을위한 [LayoutAnimation](#layoutanimation-api)을 제공합니다.
+React Native는 두 가지 보완 애니메이션 시스템을 제공합니다. React Native는 특정 값을 세부적으로 대화식으로 제어 할 수있는 2 개의 보완 애니메이션 시스템: [Animated](#animated-api)와 애니메이션 글로벌 레이아웃 트랜잭션을위한 [LayoutAnimation](#layoutanimation-api)을 제공합니다.
 
 &nbsp;
 
