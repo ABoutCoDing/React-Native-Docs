@@ -1,6 +1,6 @@
-https://facebook.github.io/react-native/docs/animations#using-the-native-driver
-
 # **Animations**
+
+> React Native 의 [Docs > Animations](https://facebook.github.io/react-native/docs/animations) 의 번역 문서입니다. 번역 오류는 댓글로 남겨 주세요. 원문을 보시기를 추천드립니다.
 
 훌륭한 사용자 경험을 위해서는 애니메이션이 매우 중요합니다. 
 
